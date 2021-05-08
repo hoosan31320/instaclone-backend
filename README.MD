@@ -19,3 +19,13 @@ You can now start using Prisma Client in your code. Reference: https://pris.ly/d
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient()
 ```
+
+## User:
+
+- [ ] Create Account
+- [ ] See Profile
+- [ ] Login
+- [ ] Edit Profile
+- [ ] Follow User
+- [ ] Unfollow User
+- [ ] Change Avatar (Image Upload)
