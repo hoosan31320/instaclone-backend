@@ -1,4 +1,5 @@
 import bcrypt from "bcrypt";
+import jwt from "jsonwebtoken";
 import client from "../client";
 
 export default {
@@ -45,6 +46,11 @@ export default {
                     ok: false,
                     error: "Incorrect password"
                 }
+            }
+            const token = await jwt.sign({ id: user.id }, process.env.SECRET_KEY);
+            return {
+                ok: true,
+                token
             }
         }
     }
