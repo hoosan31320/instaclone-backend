@@ -2,10 +2,9 @@
 
 Instaclone Backend.
 
-npx prisma migrate dev --name init
-
-    init   Setup Prisma for your app
-
+npx prisma
+migrate dev --name init
+init Setup Prisma for your app
 generate Generate artifacts (e.g. Prisma Client)
 db Manage your database schema and lifecycle
 migrate Migrate your database
@@ -15,10 +14,13 @@ format Format your schema
 Generated Prisma Client (2.22.1) to .\node_modules\@prisma\client in 580ms
 You can now start using Prisma Client in your code. Reference: https://pris.ly/d/client
 
-```
 import { PrismaClient } from '@prisma/client'
-const prisma = new PrismaClient()
-```
+const prisma = new PrismaClient() ==> prisma 대신에 client 쓰고 있음.
+
+{"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNjIwNTg3OTEwfQ.w-rKCZ2PEAgCIu5CQC5-MJYUOhh3d2U17H809LsVMtk"}
+
+apollo-sever-express 사용시
+http://localhost:4000/graphql
 
 ## User:
 
