@@ -22,6 +22,15 @@ const prisma = new PrismaClient() ==> prisma 대신에 client 쓰고 있음.
 apollo-sever-express 사용시
 http://localhost:4000/graphql
 
+<Altair 사용시>
+mutation ($avatar: Upload){
+  editProfile(
+  	avatar:$avatar){
+ok
+error
+}
+}
+
 ## User:
 
 - [ ] Create Account
