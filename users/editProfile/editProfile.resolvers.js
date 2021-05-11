@@ -8,7 +8,6 @@ const resolverFn = async (
     { firstName, lastName, username, email, password: newPassword, bio, avatar },
     { loggedInUser }
 ) => {
-    console.log(avatar);
     let avatarUrl = null;
     if (avatar) {
         const { filename, createReadStream } = await avatar;
