@@ -62,3 +62,11 @@ node version 14.15.5
 - [ ] Comment on Photo
 - [ ] Edit Comment
 - [ ] Delete Comment
+
+## Refactor
+
+- [ ] Mutation Response
+
+## Extra
+
+- [ ] S3 Image Upload
