@@ -3,6 +3,21 @@ import AWS from "aws-sdk";
 AWS.config.update({
     credentials: {
         accessKeyId: process.env.AWS_KEY,
-        secretAccessKdy: Process.env.AWS_SECRET
+        secretAccessKey: process.env.AWS_SECRET
     }
-})
+});
+
+export const uploadToS3 = async (file, userId, folderName) => {
+    const { filename, createReadStream } = await file;
+    const readStream = createReadStream();
+    const objectName = `${folderName}/${userId}-${Date.now()}-${filename}`;
+    const { Location } = await new AWS.S3()
+        .upload({
+            Bucket: "hoos31320wetube",
+            Key: objectName,
+            ACL: "public-read",
+            Body: readStream
+        })
+        .promise();
+    return Location;
+};
