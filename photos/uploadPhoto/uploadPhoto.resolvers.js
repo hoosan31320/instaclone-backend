@@ -17,9 +17,7 @@ export default {
                         file: fileUrl,
                         caption, 
                         user: { connect: { id: loggedInUser.id } },
-                        ...(hashtagObj.length > 0 && {
-                            hashtags: { connectOrCreate: hashtagObj }
-                        })
+                        ...(hashtagObj.length > 0 && { hashtags: { connectOrCreate: hashtagObj } })
                     }
                 })
             }

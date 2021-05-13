@@ -34,20 +34,29 @@ error
 mutation($file: Upload) {
   uploadPhoto(
     file:$file,
-  	caption:"Good Finns Photo") {
-    id
-    user{
-      username
-    }
-    caption
-    hashtags{
-      id
-      hashtag
-    }
-  }
+caption:"Good Finns Photo") {
+id
+user{
+username
+}
+caption
+hashtags{
+id
+hashtag
+}
+}
 }
 
 node version 14.15.5
+
+<PostgreSQL pgAdmin4 명령어>
+INSERT INTO "Hashtag" VALUES
+(1, 'Photo', '2021-05-12 22:44:07.593', '2021-05-13 15:13:38.7')
+;
+UPDATE "Photo" SET hashtag='바뀔것' WHERE id=2;
+DELETE FROM "Photo" WHERE id=1;
+
+<db에 저장시 모든 문자 소문자로 바꾸기>
 
 ## User:
 
