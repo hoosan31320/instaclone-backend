@@ -31,6 +31,22 @@ error
 }
 }
 
+mutation($file: Upload) {
+  uploadPhoto(
+    file:$file,
+  	caption:"Good Finns Photo") {
+    id
+    user{
+      username
+    }
+    caption
+    hashtags{
+      id
+      hashtag
+    }
+  }
+}
+
 node version 14.15.5
 
 ## User:
