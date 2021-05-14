@@ -61,6 +61,8 @@ DELETE FROM "Photo" WHERE id=1;
 <Double underScore>
 Here there are 2 variables unused, the first one is named _ and the second one __. With multiple unused variables it's common to name them _, __, ___ ... or _1,_2,_3...
 
+<seePhotoComments에서 User! Photo! 에러>
+
 ## User:
 
 - [ ] Create Account
