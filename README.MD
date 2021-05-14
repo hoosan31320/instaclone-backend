@@ -58,6 +58,9 @@ DELETE FROM "Photo" WHERE id=1;
 
 <db에 저장시 모든 문자 소문자로 바꾸기>
 
+<Double underScore>
+Here there are 2 variables unused, the first one is named _ and the second one __. With multiple unused variables it's common to name them _, __, ___ ... or _1,_2,_3...
+
 ## User:
 
 - [ ] Create Account
