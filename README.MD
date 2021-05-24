@@ -63,6 +63,8 @@ Here there are 2 variables unused, the first one is named _ and the second one _
 
 <seePhotoComments에서 User! Photo! 에러>
 
+http://localhost:4000/graphql/subscriptions
+
 ## User:
 
 - [ ] Create Account
