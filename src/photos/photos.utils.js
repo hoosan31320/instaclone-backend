@@ -4,7 +4,6 @@ export const processHashtags = (caption) => {
         (currentValue, index, array) => {
             return "#" + currentValue;
     })
-    console.log(hashtags);
     return hashtags.map((hashtag) => ({
         where: {hashtag},
         create: {hashtag}

@@ -42,7 +42,6 @@ export default {
                             user: { connect: { id: loggedInUser.id } }
                           }
                 })
-                console.log(message);
                 pubsub.publish(NEW_MESSAGE, { roomUpdates: { ...message } });
                 return {
                     ok: true,
