@@ -5,6 +5,7 @@ export default {
         users: ({ id }) => client.room.findUnique({ where: { id } } ).users(),
         messages: ({ id }) => client.message.findMany({
             where: { roomId: id },
+            orderBy: { createdAt: "asc"}
         }),
         unreadTotal: ({ id }, _, { loggedInUser }) => {
             if (!loggedInUser) {

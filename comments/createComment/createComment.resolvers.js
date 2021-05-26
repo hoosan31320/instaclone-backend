@@ -15,14 +15,15 @@ export default {
                         error: "Photo not found"
                     }
                 }
-                await client.comment.create({
+                const newComment = await client.comment.create({
                     data: { payload, 
                             photo: { connect: { id: photoId } },
                             user: { connect: { id: loggedInUser.id } }
                     }
                 })
                 return {
-                    ok: true
+                    ok: true,
+                    id: newComment.id
                 }
             }
         )
