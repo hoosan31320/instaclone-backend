@@ -11,6 +11,8 @@ const resolverFn = async (
 ) => {
     let avatarUrl = null;
     if (avatar) {
+        console.log("444444444444444444");
+        console.log(avatar);
         avatarUrl = await uploadToS3(avatar, loggedInUser.id, "avatars");
         console.log(avatarUrl);
         console.log("3");
