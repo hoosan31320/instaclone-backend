@@ -66,7 +66,7 @@ Here there are 2 variables unused, the first one is named _ and the second one _
 
 http://localhost:4000/graphql
 
-git config --global core.safecrlf false
+git config --global core.safecrlf true(window)
 playground: true,
 introspection: true,
 
