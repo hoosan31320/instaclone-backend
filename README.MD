@@ -71,6 +71,7 @@ playground: true,
 introspection: true,
 
 <Jenkins EC2 자동배포 테스트>
+.env 파일 처리는?
 
 ## User:
 
