@@ -70,6 +70,8 @@ git config --global core.safecrlf false(window)
 playground: true,
 introspection: true,
 
+<Jenkins EC2 자동배포 테스트>
+
 ## User:
 
 - [ ] Create Account
