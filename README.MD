@@ -72,7 +72,7 @@ introspection: true,
 
 <Jenkins EC2 자동배포 테스트>
 .env 파일 처리는?
-배포 테스트-1
+배포 테스트-2
 
 ## User:
 
