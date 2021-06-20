@@ -72,7 +72,7 @@ introspection: true,
 
 <Jenkins EC2 자동배포 테스트>
 .env 파일 처리는?
-배포 테스트-webhook setting error change
+배포 테스트-npm run build, npm run start Excute Shell에 추가
 
 ## User:
 
