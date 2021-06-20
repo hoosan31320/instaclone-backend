@@ -72,7 +72,7 @@ introspection: true,
 
 <Jenkins EC2 자동배포 테스트>
 .env 파일 처리는?
-배포 테스트 - 5432포트 개방
+배포 테스트 - babel build 삭제
 
 ## User:
 
