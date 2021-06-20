@@ -72,7 +72,7 @@ introspection: true,
 
 <Jenkins EC2 자동배포 테스트>
 .env 파일 처리는?
-배포 테스트-2
+배포 테스트-redhat에서 ubuntu로 바꿈
 
 ## User:
 
