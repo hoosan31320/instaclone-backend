@@ -73,6 +73,8 @@ introspection: true,
 <Jenkins EC2 자동배포 테스트>
 .env 파일 처리는?
 배포 테스트 - babel build 삭제
+DATABASE_URL 에는 기호가 있으면 에러가 남.
+방화벽을 초기에 활성화했음.
 
 ## User:
 
