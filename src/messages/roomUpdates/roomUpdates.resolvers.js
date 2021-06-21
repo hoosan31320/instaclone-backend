@@ -8,7 +8,7 @@ export default {
         roomUpdates: {
             subscribe: async (root, args, context, info) => {
                 const room = await client.room.findFirst({
-                    where: { id: args.id,
+                    where: { id: args.id, //roomId
                              users: { some: { id: context.loggedInUser.id } }  
                            },
                     select: { id: true }

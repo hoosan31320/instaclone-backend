@@ -76,6 +76,7 @@ introspection: true,
 DATABASE_URL 에는 기호가 있으면 에러가 남.
 방화벽을 초기에 활성화했음.
 젠킨스 테스트
+excute shell 변경
 
 ## User:
 
