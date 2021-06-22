@@ -8,8 +8,7 @@
     "migrate": "npx prisma migrate dev --preview-feature",
     "studio": "npx prisma studio",
     "build": "babel src --out-dir build",
-    "start": "node build/server",
-    "pm2start": "nodemon --exec babel-node src/server --delay 2"
+    "start": "forever start -c node_modules/.bin/babel-node build/server.js"
   },
   "repository": {
     "type": "git",
