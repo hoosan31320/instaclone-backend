@@ -77,6 +77,8 @@ DATABASE_URL 에는 기호가 있으면 에러가 남.
 ec2 방화벽을 초기에 활성화했음(sudo ufw allow or status).
 젠킨스 테스트
 excute shell 변경
+pm2 test
+npm install uuid(Need consoleLog from Jenkins)
 
 ## User:
 
