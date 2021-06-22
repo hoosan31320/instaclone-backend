@@ -79,6 +79,14 @@ ec2 방화벽을 초기에 활성화했음(sudo ufw allow or status).
 excute shell 변경
 pm2 test
 npm install uuid(Need consoleLog from Jenkins)
+ec2 npm install -g npm(npm version: 6.14.11 => 7.18.1 했음
+======= but 아무 변화 없었음.
+======= pm2 설정과 상관 없었음.
+local npm version : 6.14.11
+EC2 npm version : 7.18.1
+<= uuid vesion을 높여야 한다고 jenkins가 알려줌
+====== (but package.json 버젼8로 설치 여전히 uuid 버젼 3 error )
+====== pm2 설정과 상관 없었음.
 
 ## User:
 
@@ -118,10 +126,10 @@ npm install uuid(Need consoleLog from Jenkins)
 
 - [ ] S3 Image Upload
 
-<Execute Shell for pm2>
+<Execute Shell for EC2 pm2>
 npm install
 npm run build
 sudo cp -r /var/lib/jenkins/workspace/instaclone-ubuntu /home/ubuntu/FromJenkins
 cd /home/ubuntu/FromJenkins/instaclone-ubuntu
-npm install -g pm2
+export BUILD_ID=dontKillMePlease    //pm2 위해 꼭 들어가야함*************
 pm2 restart ecosystem.config.js --env production
