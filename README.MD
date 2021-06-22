@@ -74,7 +74,7 @@ introspection: true,
 .env 파일 처리는?
 배포 테스트 - babel build 삭제
 DATABASE_URL 에는 기호가 있으면 에러가 남.
-방화벽을 초기에 활성화했음.
+ec2 방화벽을 초기에 활성화했음(sudo ufw allow or status).
 젠킨스 테스트
 excute shell 변경
 
@@ -122,4 +122,4 @@ npm run build
 sudo cp -r /var/lib/jenkins/workspace/instaclone-ubuntu /home/ubuntu/FromJenkins
 cd /home/ubuntu/FromJenkins/instaclone-ubuntu
 npm install -g pm2
-pm2 start ecosystem.config.js --env production
+pm2 restart ecosystem.config.js --env production
