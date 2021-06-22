@@ -115,3 +115,11 @@ excute shell 변경
 ## Extra
 
 - [ ] S3 Image Upload
+
+<Execute Shell for pm2>
+npm install
+npm run build
+sudo cp -r /var/lib/jenkins/workspace/instaclone-ubuntu /home/ubuntu/FromJenkins
+cd /home/ubuntu/FromJenkins/instaclone-ubuntu
+npm install -g pm2
+pm2 start ecosystem.config.js --env production
