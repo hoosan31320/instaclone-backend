@@ -89,7 +89,7 @@ EC2 npm version : 7.18.1
 ====== (but package.json 버젼8로 설치 여전히 uuid 버젼 3 error )
 ====== pm2 설정과 상관 없었음.
 ec2 instance stop => ip 변경 => 젠킨스 깃웹훅 테스트2
-jenkins auto deploy test 2
+jenkins auto deploy test 3
 
 ## User:
 
