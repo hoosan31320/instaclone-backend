@@ -6,9 +6,9 @@ export default {
         readMessage: protectedResolver(async (_, { id }, { loggedInUser }) => {
             const message = client.message.findFirst({
                 where: { id, 
-                         userId: { not: loggedInUser.id }
+                         userId: { not: loggedInUser.id },
+                         room: { users: { some: { id: loggedInUser.id } } }
                        },
-                room: { users: { some: { id: loggedInUser.id } } },
                 select: { id: true }
             })
             if (!message) {

@@ -80,6 +80,7 @@ excute shell 변경
 pm2 test
 npm install uuid(Need consoleLog from Jenkins)
 ec2 npm install -g npm(npm version: 6.14.11 => 7.18.1 했음
+=== 다시 npm version: 6.14.11 로 ====
 ======= but 아무 변화 없었음.
 ======= pm2 설정과 상관 없었음.
 local npm version : 6.14.11
