@@ -88,7 +88,7 @@ EC2 npm version : 7.18.1
 <= uuid vesion을 높여야 한다고 jenkins가 알려줌
 ====== (but package.json 버젼8로 설치 여전히 uuid 버젼 3 error )
 ====== pm2 설정과 상관 없었음.
-ec2 instance stop => ip 변경 => 젠킨스 깃웹훅 테스트
+ec2 instance stop => ip 변경 => 젠킨스 깃웹훅 테스트2
 
 ## User:
 
