@@ -9,6 +9,7 @@ export default {
             async (_, { payload, roomId, userId }, { loggedInUser }) => {
                 let room = null;
                 if (userId) {
+                    console.log(userId, "sendMessageResolver-userID");
                     const user = await client.user.findUnique({
                         where: { id: userId },
                         select: { id: true }
@@ -25,6 +26,7 @@ export default {
                         ]}}
                     })
                 } else if (roomId) {
+                    console.log(roomId, "sendMessageResolver-roomID");
                     room = await client.room.findUnique({
                         where: { id: roomId },
                         select: { id: true }
@@ -41,8 +43,10 @@ export default {
                             room: { connect: { id: room.id } },
                             user: { connect: { id: loggedInUser.id } }
                           }
-                })
+                });
+                console.log(message, "sendMessResolv-message");
                 pubsub.publish(NEW_MESSAGE, { roomUpdates: { ...message } });
+                console.log(message, "publish");
                 return {
                     ok: true,
                     id: message.id

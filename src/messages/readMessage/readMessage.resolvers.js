@@ -7,7 +7,7 @@ export default {
             const message = client.message.findFirst({
                 where: { id, 
                          userId: { not: loggedInUser.id },
-                         room: { users: { some: { id: loggedInUser.id } } }
+                         room: { users: { some: { id: loggedInUser.id } } }   ///////////////was wrong already fix////////////
                        },
                 select: { id: true }
             })

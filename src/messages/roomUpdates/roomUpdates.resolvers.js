@@ -7,6 +7,7 @@ export default {
     Subscription: { 
         roomUpdates: {
             subscribe: async (root, args, context, info) => {
+                console.log("InRoomUpdateStart");
                 const room = await client.room.findFirst({
                     where: { id: args.id, //roomId
                              users: { some: { id: context.loggedInUser.id } }  
@@ -19,6 +20,7 @@ export default {
                 return withFilter(
                     () => pubsub.asyncIterator(NEW_MESSAGE),
                     async ( { roomUpdates }, { id }, { loggedInUser }) => {
+                        console.log("withFilterInside");
                         if (roomUpdates.roomId === id) {
                             const room = await client.room.findFirst({
                                 where: { id,
