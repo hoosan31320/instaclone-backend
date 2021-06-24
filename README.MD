@@ -17,7 +17,7 @@ You can now start using Prisma Client in your code. Reference: https://pris.ly/d
 import { PrismaClient } from '@prisma/client'
 const prisma = new PrismaClient() ==> prisma 대신에 client 쓰고 있음.
 
-{"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNjIwNTg3OTEwfQ.w-rKCZ2PEAgCIu5CQC5-MJYUOhh3d2U17H809LsVMtk"}
+{"token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6NywiaWF0IjoxNjIwNTg3OTEwfQ.w-rKCZ2PEAgCIu5CQC5-MJYUOhh3d2U17H809LsVMtk"} : palyground 사용법
 
 apollo-sever-express 사용시
 http://localhost:4000/graphql
@@ -89,7 +89,7 @@ EC2 npm version : 7.18.1
 ====== (but package.json 버젼8로 설치 여전히 uuid 버젼 3 error )
 ====== pm2 설정과 상관 없었음.
 ec2 instance stop => ip 변경 => 젠킨스 깃웹훅 테스트2
-jenkins auto deploy test 3
+jenkins auto deploy test 4
 
 ## User:
 
