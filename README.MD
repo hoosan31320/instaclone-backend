@@ -1,5 +1,8 @@
 # Instaclone
 
+<node version 14.15.5>
+<npm version : 6.14.11>
+
 Instaclone Backend.
 
 npx prisma
@@ -47,8 +50,6 @@ hashtag
 }
 }
 
-node version 14.15.5
-
 <PostgreSQL pgAdmin4 명령어>
 INSERT INTO "Hashtag" VALUES
 (1, 'Photo', '2021-05-12 22:44:07.593', '2021-05-13 15:13:38.7')
@@ -83,7 +84,7 @@ ec2 npm install -g npm(npm version: 6.14.11 => 7.18.1 했음
 === 다시 npm version: 6.14.11 로 ====
 ======= but 아무 변화 없었음.
 ======= pm2 설정과 상관 없었음.
-local npm version : 6.14.11
+
 EC2 npm version : 7.18.1
 <= uuid vesion을 높여야 한다고 jenkins가 알려줌
 ====== (but package.json 버젼8로 설치 여전히 uuid 버젼 3 error )
