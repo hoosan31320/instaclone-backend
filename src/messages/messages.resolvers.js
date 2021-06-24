@@ -1,25 +1,44 @@
-import client from "../client";
+import client from "../../client";
+import { protectedResolver } from "../../users/users.utils";
 
 export default {
-  Room: {
-    users: ({ id }) => client.room.findUnique({ where: { id } } ).users(),
-    messages: ({ id }) => client.message.findMany({
-      where: { roomId: id },
-      orderBy: { createdAt: "asc"}
-    }),
-    unreadTotal: ({ id }, _, { loggedInUser }) => {
-      if (!loggedInUser) {
-        return 0;
+  Mutation: {
+    readMessage: protectedResolver(async (_, { id }, { loggedInUser }) => {
+      const message = await client.message.findFirst({
+        where: {
+          id,
+          userId: {
+            not: loggedInUser.id,
+          },
+          room: {
+            users: {
+              some: {
+                id: loggedInUser.id,
+              },
+            },
+          },
+        },
+        select: {
+          id: true,
+        },
+      });
+      if (!message) {
+        return {
+          ok: false,
+          error: "Message not found.",
+        };
       }
-      return client.message.count({
-        where: { read: false,
-                 roomId: id,
-                 user: { id: { not: loggedInUser.id } }
-               }
-      })
-    }
+      await client.message.update({
+        where: {
+          id,
+        },
+        data: {
+          read: true,
+        },
+      });
+      return {
+        ok: true,
+      };
+    }),
   },
-  Message: {
-    user: ({ id }) => client.message.findUnique({ where: { id } }).user()
-  }
-}
+};

@@ -4,30 +4,42 @@ import { NEW_MESSAGE } from "../../constants";
 import pubsub from "../../pubsub";
 
 export default {
-  Subscription: { 
+  Subscription: {
     roomUpdates: {
       subscribe: async (root, args, context, info) => {
-        console.log("InRoomUpdateStart");
         const room = await client.room.findFirst({
-          where: { id: args.id, //roomId
-                   users: { some: { id: context.loggedInUser.id } }  
-                  },
-          select: { id: true }
-        })
+          where: {
+            id: args.id,
+            users: {
+              some: {
+                id: context.loggedInUser.id,
+              },
+            },
+          },
+          select: {
+            id: true,
+          },
+        });
         if (!room) {
-          throw new Error("You shall not see this");
+          throw new Error("You shall not see this.");
         }
         return withFilter(
           () => pubsub.asyncIterator(NEW_MESSAGE),
-          async ( { roomUpdates }, { id }, { loggedInUser }) => {
-            console.log("withFilterInside");
+          async ({ roomUpdates }, { id }, { loggedInUser }) => {
             if (roomUpdates.roomId === id) {
               const room = await client.room.findFirst({
-                where: { id,
-                         users: { some: { id: loggedInUser.id } }
-                       },
-                select: { id: true }  
-              })
+                where: {
+                  id,
+                  users: {
+                    some: {
+                      id: loggedInUser.id,
+                    },
+                  },
+                },
+                select: {
+                  id: true,
+                },
+              });
               if (!room) {
                 return false;
               }
@@ -35,7 +47,7 @@ export default {
             }
           }
         )(root, args, context, info);
-      }
-    }
-  }
-}
+      },
+    },
+  },
+};

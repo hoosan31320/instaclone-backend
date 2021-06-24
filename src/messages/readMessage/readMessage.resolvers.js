@@ -4,26 +4,41 @@ import { protectedResolver } from "../../users/users.utils";
 export default {
   Mutation: {
     readMessage: protectedResolver(async (_, { id }, { loggedInUser }) => {
-      const message = client.message.findFirst({
-        where: { id, 
-                  userId: { not: loggedInUser.id },
-                  room: { users: { some: { id: loggedInUser.id } } }   ///////////////was wrong already fix////////////
-                },
-        select: { id: true }
-      })
+      const message = await client.message.findFirst({
+        where: {
+          id,
+          userId: {
+            not: loggedInUser.id,
+          },
+          room: {
+            users: {
+              some: {
+                id: loggedInUser.id,
+              },
+            },
+          },
+        },
+        select: {
+          id: true,
+        },
+      });
       if (!message) {
         return {
-            ok: false,
-            error: "Message not found."
-        }
+          ok: false,
+          error: "Message not found.",
+        };
       }
       await client.message.update({
-        where: { id },
-        data: { read: true }
-      })
+        where: {
+          id,
+        },
+        data: {
+          read: true,
+        },
+      });
       return {
-        ok: true
-      }
-    })
-  }
-}
+        ok: true,
+      };
+    }),
+  },
+};

@@ -9,49 +9,72 @@ export default {
       async (_, { payload, roomId, userId }, { loggedInUser }) => {
         let room = null;
         if (userId) {
-          console.log(userId, "sendMessageResolver-userID");
           const user = await client.user.findUnique({
-            where: { id: userId },
-            select: { id: true }
-          })
+            where: {
+              id: userId,
+            },
+            select: {
+              id: true,
+            },
+          });
           if (!user) {
             return {
               ok: false,
-              error: "This user does not exist"
-            }
+              error: "This user does not exist.",
+            };
           }
           room = await client.room.create({
-            data: { users: { connect: [ { id: userId },
-                                        { id: loggedInUser.id }
-            ]}}
-          })
+            data: {
+              users: {
+                connect: [
+                  {
+                    id: userId,
+                  },
+                  {
+                    id: loggedInUser.id,
+                  },
+                ],
+              },
+            },
+          });
         } else if (roomId) {
-          console.log(roomId, "sendMessageResolver-roomID");
           room = await client.room.findUnique({
-            where: { id: roomId },
-            select: { id: true }
-          })
+            where: {
+              id: roomId,
+            },
+            select: {
+              id: true,
+            },
+          });
           if (!room) {
             return {
               ok: false,
-              error: "Room not found"
-            }
+              error: "Room not found.",
+            };
           }
         }
         const message = await client.message.create({
-          data: { payload, 
-                  room: { connect: { id: room.id } },
-                  user: { connect: { id: loggedInUser.id } }
-                }
+          data: {
+            payload,
+            room: {
+              connect: {
+                id: room.id,
+              },
+            },
+            user: {
+              connect: {
+                id: loggedInUser.id,
+              },
+            },
+          },
         });
-        console.log(message, "sendMessResolv-message");
+        console.log(message);
         pubsub.publish(NEW_MESSAGE, { roomUpdates: { ...message } });
-        console.log(message, "publish");
         return {
           ok: true,
-          id: message.id
-        }
+          id: message.id,
+        };
       }
-    )
-  }
-}
+    ),
+  },
+};
