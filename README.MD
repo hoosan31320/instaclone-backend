@@ -64,6 +64,7 @@ Here there are 2 variables unused, the first one is named _ and the second one _
 
 <seePhotoComments에서 [Comment]의 User! Photo! 에러>
 <subscription roomUpdates에서 Message의 Room! 에러>
+-- subscription error 이유 가능.
 
 http://localhost:4000/graphql
 
