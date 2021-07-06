@@ -5,6 +5,6 @@ export default {
         return false;
       }
       return userId === loggedInUser.id;
-    }
-  }
-}
+    },
+  },
+};

@@ -6,29 +6,37 @@ export default {
     editComment: protectedResolver(
       async (_, { id, payload }, { loggedInUser }) => {
         const comment = await client.comment.findUnique({
-          where: { id },
-          select: { userId: true }
-        })
+          where: { 
+            id,
+          },
+          select: { 
+            userId: true,
+          },
+        });
         if (!comment) {
           return {
             ok: false,
-            error: "Comment not found"
-          }
+            error: "Comment not found",
+          };
         } else if (comment.userId !== loggedInUser.id) {
           return {
             ok: false,
-            error: "Not authorized"
-          }
+            error: "Not authorized",
+          };
         } else {
           await client.comment.update({
-            where: { id },
-            data: { payload }
-          })
+            where: { 
+              id, 
+            },
+            data: { 
+              payload, 
+            },
+          });
           return {
             ok: true
-          }
+          };
         }
       }
-    )
-  }
-}
+    ),
+  },
+};
