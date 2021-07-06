@@ -1,7 +1,7 @@
 import {
-    loadFilesSync,
-    mergeResolvers,
-    mergeTypeDefs
+  loadFilesSync,
+  mergeResolvers,
+  mergeTypeDefs
 } from "graphql-tools";
 
 
