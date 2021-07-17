@@ -7,10 +7,10 @@ export default {
       client.photo.findMany({
         take: 10,
         skip: offset,
-        where: { OR: [ { user: { followers: { some: { id: loggedInUser.id } } } },
-                       { userId: loggedInUser.id}
-                     ] 
-                },
+        where: { OR: [ 
+          { user: { followers: { some: { id: loggedInUser.id } } } },
+          { userId: loggedInUser.id}
+        ]},
         orderBy: { createdAt: "desc" }
       })
     )

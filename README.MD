@@ -138,3 +138,5 @@ sudo cp -r /var/lib/jenkins/workspace/instaclone-ubuntu /home/ubuntu/FromJenkins
 cd /home/ubuntu/FromJenkins/instaclone-ubuntu
 export BUILD_ID=dontKillMePlease    //pm2 위해 꼭 들어가야함*************
 pm2 restart ecosystem.config.js --env production
+
+## seeFeed user 찾는 방식 following에서 시작하기.
