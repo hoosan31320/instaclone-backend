@@ -140,3 +140,5 @@ export BUILD_ID=dontKillMePlease    //pm2 위해 꼭 들어가야함************
 pm2 restart ecosystem.config.js --env production
 
 ## seeFeed user 찾는 방식 following에서 시작하기.
+
+## postgesql 대소문자를 구별 못하는듯하다. 대문자로 db에 저장돼 있는 쿼리는 검색이 않돼는거 같음.
