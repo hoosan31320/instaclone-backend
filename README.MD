@@ -92,44 +92,7 @@ EC2 npm version : 7.18.1
 ====== pm2 설정과 상관 없었음.
 ec2 instance stop => ip 변경 => 젠킨스 깃웹훅 테스트2
 jenkins auto deploy test-
-
-## User:
-
-- [ ] Create Account
-- [ ] See Profile
-- [ ] Login
-- [ ] Edit Profile
-- [ ] Change Avatar (Image Upload)
-- [ ] Follow User
-- [ ] Unfollow User
-- [ ] Search Users
-- [ ] See Followers
-- [ ] See Following
-
-## Photos
-
-- [ ] See Photo
-- [ ] Upload Photo
-- [ ] Edit Photo
-- [ ] Like / Unlike Photo
-- [ ] See Photo Likes
-- [ ] See Feed
-- [ ] Search Photos
-- [ ] See Hashtags
-
-## Comments
-
-- [ ] Comment on Photo
-- [ ] Edit Comment
-- [ ] Delete Comment
-
-## Refactor
-
-- [ ] Mutation Response
-
-## Extra
-
-- [ ] S3 Image Upload
+hashtags lowerCase() cancel
 
 <Execute Shell for EC2 pm2>
 npm install
