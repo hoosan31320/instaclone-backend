@@ -1,0 +1,2 @@
+-- AlterTable
+ALTER TABLE "Like" ALTER COLUMN "photoId" DROP NOT NULL;
