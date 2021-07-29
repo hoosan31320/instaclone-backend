@@ -23,6 +23,7 @@
   "homepage": "https://github.com/hoosan31320/instaclone-backend#readme",
   "dependencies": {
     "@babel/cli": "^7.14.3",
+    "@paljs/plugins": "^3.6.1",
     "@prisma/client": "^2.22.1",
     "apollo-server": "^2.24.0",
     "apollo-server-express": "^2.24.0",

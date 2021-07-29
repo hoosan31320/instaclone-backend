@@ -36,10 +36,13 @@ model Photo {
   userId    Int
   file      String
   caption   String?
+  /// @onDelete(CASCADE)
   hashtags  Hashtag[]
   createdAt DateTime  @default(now())
   updatedAt DateTime  @updatedAt
+  /// @onDelete(CASCADE)
   likes     Like[]
+  /// @onDelete(CASCADE)
   comments  Comment[]
 }
 

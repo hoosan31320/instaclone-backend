@@ -15,7 +15,11 @@ updatedAt DateTime @updatedAt
 photo Photo? @relation(fields: [photoId], references: [id])
 user User @relation(fields: [userId], references: [id])
 photoId Int?
-(변경하기 후에 npm run migrate)
+(변경하기 후에 npm run migrate && 예전 like data 수동으로 삭제후 photo 삭제)
 
 https://dev.to/pedrovrima/cascade-deleting-in-prisma-v2-apj
 https://www.prisma.io/docs/concepts/components/prisma-client/crud#delete
+
+PRISMA2 DELETE CASCADE ===> @paljs/plugin
+https://kosaf04pyh.tistory.com/337
+https://paljs.com/plugins/delete/

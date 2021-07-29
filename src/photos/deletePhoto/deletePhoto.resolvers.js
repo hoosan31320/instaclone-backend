@@ -1,9 +1,12 @@
 import client from "../../client";
 import { protectedResolver } from "../../users/users.utils";
+import { PrismaDelete } from '@paljs/plugins';
 
 export default {
   Mutation: {
     deletePhoto: protectedResolver(async (_, { id }, { loggedInUser }) => {
+      const prismaDelete = new PrismaDelete(client);
+      await prismaDelete.onDelete({ model: "Photo", where: { id } });
       const photo = await client.photo.findUnique({
         where: { id },
         select: { userId: true }
