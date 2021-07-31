@@ -8,21 +8,14 @@ export default {
         where: { id: loggedInUser.id },
         select: { following: true }
       });
-      const followingIds = following.map(user => user.id);
-      
-      // console.log(...following, "..............following.....")
-      // console.log(followingIds, "...............followingIds...");
-      // console.log(...followingIds, "............ffffollowingIds........");
-      // const A = new Set(following);
       // https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
-
       return client.photo.findMany({
         take: 30,
         skip: offset,
         where: { 
           user : { 
             id: {
-              in: [...followingIds, loggedInUser.id ]
+              in: [...following.map(user => user.id), loggedInUser.id ]
             } 
           }
         },
