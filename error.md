@@ -23,3 +23,6 @@ https://www.prisma.io/docs/concepts/components/prisma-client/crud#delete
 PRISMA2 DELETE CASCADE ===> @paljs/plugin
 https://kosaf04pyh.tistory.com/337
 https://paljs.com/plugins/delete/
+
+<SeeFeed 수정 - Joons Lab>
+https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
