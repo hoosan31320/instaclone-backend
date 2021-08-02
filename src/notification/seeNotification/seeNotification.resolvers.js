@@ -1,5 +1,5 @@
 import client from "../../client";
-import { protectResolver } from "../../users/users.utils";
+import { protectedResolver } from "../../users/users.utils";
 
 const resolverFn = async(_, __, {loggedInUser}) => {
     return await client.notification.findMany({
@@ -14,6 +14,6 @@ const resolverFn = async(_, __, {loggedInUser}) => {
 
 export default {
     Query: {
-        seeNotification: protectResolver(resolverFn)
+        seeNotification: protectedResolver(resolverFn)
     }
 }

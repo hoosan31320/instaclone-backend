@@ -1,5 +1,5 @@
 import client from "../../client";
-import { protectResolver } from "../../users/users.utils";
+import { protectedResolver } from "../../users/users.utils";
 
 const resolverFn = async(_, {id}, {loggedInUser}) => {
     const notification = await client.notification.findUnique({
@@ -30,6 +30,6 @@ const resolverFn = async(_, {id}, {loggedInUser}) => {
 
 export default {
     Mutation: {
-        deleteNotification: protectResolver(resolverFn)
+        deleteNotification: protectedResolver(resolverFn)
     }
 }
