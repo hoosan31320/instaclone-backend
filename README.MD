@@ -1,7 +1,7 @@
 # Instaclone
 
 <node version 14.15.5>
-<npm version : 6.14.11>
+<npm version : 6.14.11> => <7.20.3> 2021-08-04
 
 Instaclone Backend.
 
