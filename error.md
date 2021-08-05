@@ -26,3 +26,6 @@ https://paljs.com/plugins/delete/
 
 <SeeFeed 수정 - Joons Lab>
 https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
+
+<PlayGround 보호>
+You can use CORS to only allow one domain to send requests to your api. https://www.npmjs.com/package/helmet
