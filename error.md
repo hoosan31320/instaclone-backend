@@ -32,3 +32,18 @@ You can use CORS to only allow one domain to send requests to your api. https://
 
 <Push token 변경 - 기기가 바뀌면 토큰을 바꿔준다, 다른 user도 내 토큰을 쓰고 있을때 사용자에게 알려줄 방법
 error 처리 이외의 방법으로 사용자에게 알려준다. - 알려줄 수 있는 resolver를 다시 만드는 방법이 있을듯 >
+
+const myRooms = await client.user.findUnique({
+where: { username: loggedInUser.username }
+}).rooms();
+console.log(myRooms, ".............myRooms...");
+
+      const userRooms = await client.user.findUnique({
+        where: { id: 2 }
+      }).rooms();
+      console.log(userRooms, "........userRooms.....");
+      for(let i = 0; i < myRooms.length; i++ ){
+        myRooms[i];
+        console.log(myRooms[i], "............myRooms[i]............");
+        return myRooms[i];
+      }
