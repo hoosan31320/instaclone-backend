@@ -55,19 +55,6 @@ export default {
       const minValue = Math.min(...seeFeedFinalNo);
 
       return minValue;
-    },
-    searchPhotosFinalNo: async (_, { offset }, { keyword }) => {
-      const searchPhotos = await client.photo.findMany({
-        where: { caption: { contains: keyword } }, 
-      });
-      const searchPhotoFinalNo = [];
-      for (var item of searchPhotos) {
-        const searchPhotoIds = item.id;
-        searchPhotoFinalNo.push(searchPhotoIds);
-      }
-      const minValue = Math.min(...searchPhotoFinalNo);
-
-      return minValue;
     }
   },
   Hashtag: {

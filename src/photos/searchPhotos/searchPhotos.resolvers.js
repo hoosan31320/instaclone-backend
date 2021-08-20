@@ -2,7 +2,7 @@ import client from "../../client";
 
 export default {
   Query: {
-    searchPhotos: (_, { offset }, { keyword }) => {
+    searchPhotos: (_, { offset, keyword }) => {
       return client.photo.findMany({
         take: 30,
         skip: offset,
