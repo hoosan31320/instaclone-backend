@@ -10,7 +10,7 @@ export default {
       });
       // https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
       return client.photo.findMany({
-        take: 10,
+        take: 30,
         skip: offset,
         where: { 
           user : { 
