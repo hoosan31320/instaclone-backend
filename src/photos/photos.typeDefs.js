@@ -12,7 +12,7 @@ export default gql`
     hashtags: [Hashtag]
     isMine: Boolean!
     isLiked: Boolean!
-    seeFeedFinalNo: Int!
+    seeFeedFinalNo: Int
     createdAt: String!
     updatedAt: String!
   }
