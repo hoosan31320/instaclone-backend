@@ -53,10 +53,9 @@ export default {
         seeFeedFinalNo.push(seeFeedPhotoIds);
       }
       if (seeFeedFinalNo.length == 0) {
-        return;
+        return 1;
       }
       const minValue = Math.min(...seeFeedFinalNo);
-      console.log(minValue, ".............minValue............");
       return minValue;
     }
   },
