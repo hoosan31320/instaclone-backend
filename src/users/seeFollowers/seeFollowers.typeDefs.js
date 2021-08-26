@@ -5,9 +5,8 @@ export default gql`
     ok: Boolean!
     error: String
     followers: [User]
-    totalPages: Int
   }
   type Query {
-    seeFollowers(username: String!, page: Int!): seeFollowersResult!
+    seeFollowers(username: String!, offset: Int!): seeFollowersResult!
   }
 `;
