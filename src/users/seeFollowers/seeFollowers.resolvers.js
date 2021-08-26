@@ -16,7 +16,7 @@ export default {
       const followers = await client.user
         .findUnique({ where: { username } })
         .followers({
-          take: 10,
+          take: 20,
           skip: offset
         });
 
