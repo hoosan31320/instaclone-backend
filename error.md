@@ -32,4 +32,4 @@ https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFee
 npmV6 브랜치에서 진행.
 DB, SERVER 다 heroku에서 진행 시작.
 
-<Heroku node.js npm 설정>
+<Heroku node.js npm 설정 - nodejs 14.15.5>
