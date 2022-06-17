@@ -26,3 +26,8 @@ https://paljs.com/plugins/delete/
 
 <SeeFeed 수정 - Joons Lab>
 https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
+
+<<<node version 14.15.5 계속 유지 >>>
+<<<npm version : 6.14.11 계속 유지>>> 
+npmV6 브랜치에서 진행.
+DB, SERVER 다 heroku에서 진행 시작.
