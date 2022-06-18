@@ -38,4 +38,4 @@ DB, SERVER 다 heroku에서 진행 시작.
 
 <connect New app to Old DB> again  
 
-<New Server and New DB>
+<New Server and New DB> again
