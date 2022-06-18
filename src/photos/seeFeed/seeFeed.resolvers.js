@@ -9,7 +9,7 @@ export default {
         select: { following: true }
       });
       // https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
-      const photoFirst = photo[0];
+      const photoFirst = { photoId: 1 } ;
 
       return (following == null) ? photoFirst : client.photo.findMany({
         take: 30,
