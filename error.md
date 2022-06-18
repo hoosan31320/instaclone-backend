@@ -36,4 +36,4 @@ DB, SERVER 다 heroku에서 진행 시작.
 
 <heroku buildpacks -a instaclone-nodejs>
 
-<connect New app to Old DB>
+<connect New app to Old DB> again
