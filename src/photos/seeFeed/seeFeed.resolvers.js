@@ -5,8 +5,8 @@ export default {
   Query: {
     seeFeed: protectedResolver( async (_, { offset }, { loggedInUser }) => {
       const { following } = await client.user.findUnique({
-        where: { id: loggedInUser.id, id: 1 },
-        select: { following: true }
+        where: { id: loggedInUser.id },
+        select: { following: true, id: 1 }
       });
       // https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
       return client.photo.findMany({
