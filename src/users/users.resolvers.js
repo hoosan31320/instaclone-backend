@@ -27,7 +27,7 @@ export default {
       });
       return Boolean(exists);
     },
-    photos: ({ id }) => client.user.findUnique({ where : { id } }).photos()
-    rooms: ({ id }) => client.room.findUnique({ where: { id } }).users()
+    photos: ({ id }) => client.user.findUnique({ where : { id } }).photos(),
+    rooms: ({ id }) => client.user.findUnique({ where: { id } }).rooms()
   }
 };
