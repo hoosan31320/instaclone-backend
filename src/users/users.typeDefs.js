@@ -18,5 +18,6 @@ export default gql`
     isMe: Boolean!
     isFollowing: Boolean!
     comments: [Comment]
+    rooms: [Room]
   }
 `;
