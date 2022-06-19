@@ -39,3 +39,6 @@ DB, SERVER 다 heroku에서 진행 시작.
 <connect New app to Old DB> again  
 
 <New Server and New DB> again
+
+<PlayGround 보호>
+You can use CORS to only allow one domain to send requests to your api. https://www.npmjs.com/package/helmet

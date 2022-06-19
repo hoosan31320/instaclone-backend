@@ -26,11 +26,10 @@ model User {
   following    User[]    @relation("FollowRelation", references: [id])
   comments     Comment[]
   rooms        Room[]
-  createdAt    DateTime  @default(now())
-  updatedAt    DateTime  @updatedAt
   Message      Message[]
   notification Notification[]
-
+  createdAt    DateTime  @default(now())
+  updatedAt    DateTime  @updatedAt
 }
 
 model Photo {
@@ -41,12 +40,12 @@ model Photo {
   caption   String?
   /// @onDelete(CASCADE)
   hashtags  Hashtag[]
-  createdAt DateTime  @default(now())
-  updatedAt DateTime  @updatedAt
   /// @onDelete(CASCADE)
   likes     Like[]
   /// @onDelete(CASCADE)
   comments  Comment[]
+  createdAt DateTime  @default(now())
+  updatedAt DateTime  @updatedAt
 }
 
 model Hashtag {
@@ -72,11 +71,11 @@ model Comment {
   id        Int      @id @default(autoincrement())
   user      User     @relation(fields: [userId], references: [id])
   photo     Photo    @relation(fields: [photoId], references: [id])
+  userId    Int
+  photoId   Int  
   payload   String
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
-  userId    Int
-  photoId   Int
 }
 
 model Room {
@@ -106,3 +105,5 @@ model Notification {
   userId    Int
   createdAt DateTime @default(now())
 }
+
+
