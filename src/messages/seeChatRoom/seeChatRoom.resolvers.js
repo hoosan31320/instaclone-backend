@@ -29,9 +29,23 @@ export default {
       console.log(CHAT_ROOM, ".......CHAT_ROOM..........");
       const RoomId = CHAT_ROOM[0];
       const fakeRoom = {
-        id: 1
+        __typename: "Room",
+        id: RoomId,
+        unreadTotal: 0,
+        users: [{
+            __typename: "User",
+            avatar: null,
+            id: 1,
+            username: "hoosan",
+          },
+          {
+            __typename: "User",
+            avatar: null,
+            id: 4,
+            username: "hoosan2",
+          },
+        ],
       }
-      fakeRoom.id = RoomId;
 
 
       // https://aljjabaegi.tistory.com/312
