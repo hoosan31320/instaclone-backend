@@ -32,7 +32,30 @@ export default {
           return true;
         }
         return false;
-      }
+      },
+      seeFeedFinalNo: async (_, { offset }, { loggedInUser}) => {
+        const { following } = await client.user.findUnique({
+          where: { id: loggedInUser.id },
+          select: { following: true }
+        });
+        const seeFeedPhotos = await client.photo.findMany({
+          where: { 
+            user : { 
+              id: {
+                in: [...following.map(user => user.id), loggedInUser.id ]
+              } 
+            }
+          }, 
+        });
+        const seeFeedFinalNo = [];
+        for (var item of seeFeedPhotos) {
+          const seeFeedPhotoIds = item.id;
+          seeFeedFinalNo.push(seeFeedPhotoIds);
+        }
+        const minValue = Math.min(...seeFeedFinalNo);
+
+        return minValue;
+		  }
   },
   Hashtag: {
     photos: ({ id }, { page }, { loggedInUser }) => {
