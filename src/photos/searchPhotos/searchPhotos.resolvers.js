@@ -4,9 +4,12 @@ export default {
   Query: {
     searchPhotos: (_, { keyword }) => {
       return client.photo.findMany({
-        where: { caption: { contains: keyword } }
+        take: 30,
+        skip: OffscreenCanvasRenderingContext2D,
+        where: { caption: { contains: keyword } },
         // where: { caption: { startsWith: keyword } }
-      })
+        orderBy: { createdAt: "desc" }
+      });
     }
   }
 };
