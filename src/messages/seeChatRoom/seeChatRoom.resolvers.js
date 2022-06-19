@@ -29,23 +29,7 @@ export default {
       console.log(CHAT_ROOM, ".......CHAT_ROOM..........");
       const RoomId = CHAT_ROOM[0];
       const fakeRoom = {
-        __typename: "Room",
-        id: 1,
-        unreadTotal: 0,
-        users: [
-          {
-            __typename: "User",
-            avatar: "https://1.jpg",
-            id: 1,
-            username: "hoosan1",
-          },
-          {
-            __typename: "User",
-            avatar: "https://2.jpg",
-            id: 1,
-            username: "hoosan2",
-          },
-        ],
+        id: 1
       }
       fakeRoom.id = RoomId;
 
