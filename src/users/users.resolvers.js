@@ -28,6 +28,6 @@ export default {
       return Boolean(exists);
     },
     photos: ({ id }) => client.user.findUnique({ where : { id } }).photos(),
-    rooms: ({ id }) => client.user.findUnique({ where: { id } }).rooms()
+    rooms: ({ username }) => client.user.findUnique({ where: { username } }).rooms()
   }
 };
