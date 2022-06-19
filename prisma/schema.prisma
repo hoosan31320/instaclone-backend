@@ -19,6 +19,7 @@ model User {
   password     String
   bio          String?
   avatar       String?
+  pushToken    String?
   photos       Photo[]
   likes        Like[]
   followers    User[]    @relation("FollowRelation", references: [id])
