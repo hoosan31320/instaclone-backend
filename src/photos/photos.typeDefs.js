@@ -13,7 +13,6 @@ export default gql`
     isMine: Boolean!
     isLiked: Boolean!
     seeFeedFinalNo: Int!
-    searchPhotoFinalNo: Int!
     createdAt: String!
     updatedAt: String!
   }
