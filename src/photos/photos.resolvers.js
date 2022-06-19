@@ -52,8 +52,12 @@ export default {
         const seeFeedPhotoIds = item.id;
         seeFeedFinalNo.push(seeFeedPhotoIds);
       }
+      if (seeFeedFinalNo.length == 0) {
+        return;
+      }
       const minValue = Math.min(...seeFeedFinalNo);
 
+      console.log(minValue, ".............minValue............");
       return minValue;
     }
   },
