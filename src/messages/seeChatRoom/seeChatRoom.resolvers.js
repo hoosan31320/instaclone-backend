@@ -17,8 +17,7 @@ export default {
       for( var item of myRooms ) { 
         const myRoomsIdFirst = item.id;
         myRoomsId.push(myRoomsIdFirst);
-      } 
-      
+      }
       const usersRoomsId = [];
       for( var item of userRooms ) { 
         const usersRoomsIdFirst = item.id;
@@ -46,7 +45,6 @@ export default {
           },
         ],
       }
-      
 
       // https://aljjabaegi.tistory.com/312
       // const QUERY_RESULT = [];

@@ -27,6 +27,19 @@ https://paljs.com/plugins/delete/
 <SeeFeed 수정 - Joons Lab>
 https://github.com/JoonDong2/instagureng-backend/blob/master/src/api/Post/seeFeed/seeFeed.js
 
+<<<node version 14.15.5 계속 유지 >>>
+<<<npm version : 6.14.11 계속 유지>>> 
+npmV6 브랜치에서 진행.
+DB, SERVER 다 heroku에서 진행 시작.
+
+<Heroku node.js npm 설정 - nodejs 14.15.5>
+
+<heroku buildpacks -a instaclone-nodejs>
+
+<connect New app to Old DB> again  
+
+<New Server and New DB> again
+
 <PlayGround 보호>
 You can use CORS to only allow one domain to send requests to your api. https://www.npmjs.com/package/helmet
 

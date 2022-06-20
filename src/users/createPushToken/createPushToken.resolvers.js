@@ -3,10 +3,10 @@ import { protectedResolver } from "../users.utils";
 
 const resolverFn = async(_, { pushToken }, {loggedInUser}) => {
   try{
-    // const existingPushTokenUser = await client.user.findFirst({
+    // const existingPushToken = await client.user.findFirst({
     //   where: { pushToken }
     // });
-    // if (existingPushTokenUser) {
+    // if (existingPushToken) {
     //   throw new Error("This Phone is already registered");
     // }
     const updatedUser = await client.user.update({

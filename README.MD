@@ -105,3 +105,14 @@ pm2 restart ecosystem.config.js --env production
 ## seeFeed user 찾는 방식 following에서 시작하기.
 
 ## postgesql 대소문자를 구별 못하는듯하다. 대문자로 db에 저장돼 있는 쿼리는 검색이 않돼는거 같음.
+
+<Branch 만들기 - npm 6.14.11 마지막에서>
+git clone https://github.com/hoosan31320/instaclone-backend
+git push origin main(auth 등록하기 - push할건 없음)
+git checkout c0c8faad31b6e3ff3b9f41d5eb13b56729f84f4d
+git branch npmV6(모컬에 브랜치 만들기)
+git checkout npmV6 **브랜치만들고 꼭 checkout해야함 빼먹은부분**
+git push -u origin npmV6(c0c8f자리에서 npmV6로 푸시했음.)
+//위는 브랜치 생성시 내용//
+//아래는 현재 커밋 내용//
+git checkout npmV6 했음.
