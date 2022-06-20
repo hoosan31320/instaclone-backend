@@ -1,5 +1,5 @@
 import client from "../../client";
-import { protectedResolver } from "../users.utils";
+import { protectedResolver } from "../users/users.utils";
 
 const resolverFn = async(_, { pushToken }, {loggedInUser}) => {
   try{

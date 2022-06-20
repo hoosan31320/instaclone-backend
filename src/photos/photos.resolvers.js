@@ -56,6 +56,7 @@ export default {
         return 1;
       }
       const minValue = Math.min(...seeFeedFinalNo);
+
       return minValue;
     }
   },
